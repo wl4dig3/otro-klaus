@@ -1,10 +1,12 @@
-<!-- Template -->
 <template>
   <div class="container">
     <!-- Botón Logout -->
-    <button @click="logout" class="btnLogout">Logout</button>
+    <button type="button" @click="logout" class="btn btn-outline-warning mt-2">
+      Logout
+    </button>
+
     <!-- Tabla para Leer Información -->
-    <h4 class="titleTable">Stock de productos</h4>
+    <h4 class="titleTable">Inventario de productos</h4>
     <table class="table">
       <thead>
         <th>Código</th>
@@ -23,21 +25,22 @@
           <td>
             <!-- Botón Editar -->
             <button
+              type="button"
               v-b-modal.modal-1
               @click="editar(producto.id)"
-              class="btn btnEdit"
+              class="btn btn-primary mr-1"
             >
               Editar
             </button>
-            <!-- Botón Eliminar -->
-            <button @click="eliminar(producto.id)" class="btn btnDelete">
+            <!-- Botón Eliminar  Producto-->
+            <button @click="eliminar(producto.id)" class="btn btn-danger">
               Eliminar
             </button>
           </td>
         </tr>
       </tbody>
     </table>
-    <!-- Modal Editar -->
+    
     <b-modal id="modal-1" title="BootstrapVue" class="EditForm">
       <b-form-group id="input-group-1" label="Código:" label-for="input-1">
         <b-form-input v-model="producto.data.codigo"> </b-form-input>
@@ -55,13 +58,13 @@
         <b-form-input v-model="producto.data.precio"> </b-form-input>
       </b-form-group>
 
-      <b-button type="submit" class="btnCambios" @click="update"
-        >Aceptar cambios</b-button
+      <!-- <b-button type="submit" class="btn btn-success" @click="update"
+        >Subir cambios</b-button -->
       >
     </b-modal>
-    <hr>
-        <!-- Formulario Agregar Producto -->
-    <h4 class="titleAdd">Agrega un producto</h4>
+    <hr />
+               <!-- Formulario para agregar Producto -->
+    <h4 class="titleAdd">Agrega un juguete</h4>
     <div class="w-50 m-auto formAdd">
       <b-form-group id="input-group-1" label="Código:" label-for="input-1">
         <b-form-input v-model="codigo"> </b-form-input>
@@ -78,17 +81,19 @@
       <b-form-group id="input-group-2" label="Precio:" label-for="input-2">
         <b-form-input v-model="precio"> </b-form-input>
       </b-form-group>
-
-      <b-button type="submit" class="btnAdd" @click="agregar">Agregar</b-button>
+                <!-- boton para agregar el juguete  -->
+      <b-button type="submit" class="btn btn-warning mb-3" @click="agregar"
+        >Agregar</b-button
+      >
     </div>
   </div>
 </template>
 
-<!-- Script -->
+
 <script>
 import firebase from "firebase";
 import { mapState, mapGetters, mapActions } from "vuex";
-//import Form from '@/components/Form';
+
 export default {
   name: "Home",
   data() {
@@ -108,9 +113,7 @@ export default {
       },
     };
   },
-  //  components: {
-  //    Form,
-  // },
+
   computed: {
     ...mapState(["productos"]),
     ...mapGetters(["getProductoUpdating"]),
@@ -123,9 +126,7 @@ export default {
         .signOut()
         .then(() => this.$router.replace("login"));
     },
-    //    editar(id){
-    //      this.idUpdating = this.id
-    //   },
+
     ...mapActions(["agregarProducto", "updateProducto", "eliminarProducto"]),
     agregar() {
       const producto = {
@@ -145,26 +146,24 @@ export default {
 
       console.log(productoUpdating);
     },
-    update(){
-      this.updateProducto(this.producto)
-      this.$bvModal.hide("modal-1")
+    // update() {
+    //   this.updateProducto(this.producto);
+    //   this.$bvModal.hide("modal-1");
+    // },
+    eliminar(id) {
+      this.eliminarProducto(id);
     },
-    eliminar(id){
-      this.eliminarProducto(id)
-
-    }
   },
 };
 </script>
 
-<!-- Style -->
+
 <style>
-.btnLogout {
-  color: #ffffff;
-  background-color: rgb(3, 170, 148);
-  border-style: none !important;
-  border-radius: 5px;
-  padding: 10px 20px;
+.container {
+  background-image: url("./../assets/klaus.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 400px;
 }
 .titleTable {
   margin-top: 50px;
@@ -177,37 +176,7 @@ export default {
   margin-top: 50px;
   font-weight: bold;
 }
-.btnDelete {
-  color: #ffffff !important;
-  background-color: rgb(248, 72, 72) !important;
-  border-style: none !important;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin-right: 2px;
 
-}
-.btnEdit {
-  color: #ffffff !important;
-  background-color: rgb(48, 151, 247) !important;
-  border-style: none !important;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin-right: 2px;
-}
-.btnAdd {
-  color: #ffffff !important;
-  background-color: rgb(228, 175, 2) !important;
-  border-style: none !important;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin-right: 2px;
-  margin-bottom: 100px;
-}
-.btnCambios {
-  color: #ffffff !important;
-  background-color: rgb(48, 151, 247) !important;
-  border-style: none !important;
-  border-radius: 5px;
-  padding: 10px 20px;
-}
 </style>
+
+

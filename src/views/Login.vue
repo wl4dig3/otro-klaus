@@ -27,11 +27,11 @@
     <b-button type="submit" class="btnAceptar" @click="login">Entrar</b-button>
     <b-button type="submit" class="btnReg" @click="register">Registrar</b-button>
 
-    <div class="datosLogin">
-      <h6 class="titleDatos">****Datos Login****</h6>
+    <div class="mt-5">
+      <h6 class="titleDatos">Si ya eres usuario registrado, favor entrar</h6>
       <p>
-        Usuario: walterwhite@gmail.com <br />
-        Password: 123456
+        De lo contrario, por favor regisése, Gracias
+        
       </p>
     </div>
   </div>
@@ -79,7 +79,7 @@ export default {
 </script>
 
 <!-- Style -->
-<style>
+<style scoped>
 .btnAceptar {
   color: #ffffff;
   background-color: rgb(3, 170, 148);
@@ -99,9 +99,9 @@ export default {
   max-width: 400px;
   margin: auto;
 }
-.datosLogin {
+/* .datosLogin {
   margin-top: 50px;
-}
+} */
 .titleDatos {
   font-weight: bolder;
 }

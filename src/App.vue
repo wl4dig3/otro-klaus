@@ -1,4 +1,4 @@
-<!-- Template -->
+
 <template>
   <div id="app">
     <div id="nav">
@@ -10,15 +10,15 @@
 </template>
 
 
-<!-- Script -->
+
 <script>
-import { mapActions } from 'vuex';
+import { mapActions } from "vuex";
 export default {
   mounted() {
-    this.getDataProductos()
+    this.getDataProductos();
   },
   methods: {
-    ...mapActions(['getDataProductos']),
+    ...mapActions(["getDataProductos"]),
   },
 };
 </script>
@@ -31,6 +31,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: aquamarine;
+  max-height: 1000px;
 }
 
 #nav {
@@ -45,7 +47,8 @@ export default {
     }
   }
 }
-.modal-content footer, .modal-content header  {
+.modal-content footer,
+.modal-content header {
   display: none;
 }
 </style>
