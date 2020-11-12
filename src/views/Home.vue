@@ -6,8 +6,8 @@
     </button>
 
     <!-- Tabla para Leer Información -->
-    <h4 class="titleTable">Inventario de productos</h4>
-    <table class="table">
+    <h4 class="font-weight-bolder mt-5 text-white">Inventario de productos</h4>
+    <table class="mx-auto">
       <thead>
         <th>Código</th>
         <th>Nombre</th>
@@ -28,19 +28,19 @@
               type="button"
               v-b-modal.modal-1
               @click="editar(producto.id)"
-              class="btn btn-primary mr-1"
+              class="btn btn-primary ml-5"
             >
               Editar
             </button>
             <!-- Botón Eliminar  Producto-->
-            <button @click="eliminar(producto.id)" class="btn btn-danger">
+            <button @click="eliminar(producto.id)" class="btn btn-danger ml-3">
               Eliminar
             </button>
           </td>
         </tr>
       </tbody>
     </table>
-    
+    <!-- ventana modal que se dispara al clickear el boton editar  -->
     <b-modal id="modal-1" title="BootstrapVue" class="EditForm">
       <b-form-group id="input-group-1" label="Código:" label-for="input-1">
         <b-form-input v-model="producto.data.codigo"> </b-form-input>
@@ -58,33 +58,35 @@
         <b-form-input v-model="producto.data.precio"> </b-form-input>
       </b-form-group>
 
-      <!-- <b-button type="submit" class="btn btn-success" @click="update"
-        >Subir cambios</b-button -->
+      <b-button type="submit" class="btn btn-success" @click="update"
+        >Subir cambios</b-button
       >
     </b-modal>
     <hr />
-               <!-- Formulario para agregar Producto -->
-    <h4 class="titleAdd">Agrega un juguete</h4>
-    <div class="w-50 m-auto formAdd">
-      <b-form-group id="input-group-1" label="Código:" label-for="input-1">
-        <b-form-input v-model="codigo"> </b-form-input>
-      </b-form-group>
+    <!-- Formulario para agregar Producto -->
+      <h4 class="titleAdd">Agrega un juguete</h4>
+    <div class="formu">
+      <div class="w-50 m-auto">
+        <b-form-group id="input-group-1" label="Código:" label-for="input-1">
+          <b-form-input v-model="codigo"> </b-form-input>
+        </b-form-group>
 
-      <b-form-group id="input-group-2" label="Nombre:" label-for="input-2">
-        <b-form-input v-model="nombre"> </b-form-input>
-      </b-form-group>
+        <b-form-group id="input-group-2" label="Nombre:" label-for="input-2">
+          <b-form-input v-model="nombre"> </b-form-input>
+        </b-form-group>
 
-      <b-form-group id="input-group-2" label="Stock:" label-for="input-2">
-        <b-form-input v-model="stock"> </b-form-input>
-      </b-form-group>
+        <b-form-group id="input-group-2" label="Stock:" label-for="input-2">
+          <b-form-input v-model="stock"> </b-form-input>
+        </b-form-group>
 
-      <b-form-group id="input-group-2" label="Precio:" label-for="input-2">
-        <b-form-input v-model="precio"> </b-form-input>
-      </b-form-group>
-                <!-- boton para agregar el juguete  -->
-      <b-button type="submit" class="btn btn-warning mb-3" @click="agregar"
-        >Agregar</b-button
-      >
+        <b-form-group id="input-group-2" label="Precio:" label-for="input-2">
+          <b-form-input v-model="precio"> </b-form-input>
+        </b-form-group>
+        <!-- boton para agregar el juguete  -->
+        <b-button type="submit" class="btn btn-warning mb-3" @click="agregar"
+          >Agregar</b-button
+        >
+      </div>
     </div>
   </div>
 </template>
@@ -146,10 +148,10 @@ export default {
 
       console.log(productoUpdating);
     },
-    // update() {
-    //   this.updateProducto(this.producto);
-    //   this.$bvModal.hide("modal-1");
-    // },
+    update() {
+      this.updateProducto(this.producto);
+      this.$bvModal.hide("modal-1");
+    },
     eliminar(id) {
       this.eliminarProducto(id);
     },
@@ -158,25 +160,26 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 .container {
   background-image: url("./../assets/klaus.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 400px;
+  height: 900px;
 }
-.titleTable {
-  margin-top: 50px;
-  font-weight: bold;
+.formu {
+  background-color: rgb(130, 198, 238);
 }
-.table {
-  margin-top: 20px;
+
+th,
+td {
+  color: whitesmoke;
+  font-weight: bolder;
 }
 .titleAdd {
   margin-top: 50px;
   font-weight: bold;
 }
-
 </style>
 
 

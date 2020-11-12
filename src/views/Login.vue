@@ -1,7 +1,7 @@
 <!-- Template -->
 <template>
-  <div>
-    <b-form-group id="input-group-1" label="Email:" label-for="input-1">
+  <div class="container">
+    <b-form-group id="input-group-1 text-white" label="Email:" label-for="input-1">
       <b-form-input
         class="input"
         id="input-1"
@@ -23,12 +23,12 @@
       >
       </b-form-input>
     </b-form-group>
+                <!-- botones  -->
+    <button type="button" class="btn btn-primary mr-2" @click="login">Entrar</button>
+    <button type="button" class="btn btn-success" @click="register">Registrar</button>
 
-    <b-button type="submit" class="btnAceptar" @click="login">Entrar</b-button>
-    <b-button type="submit" class="btnReg" @click="register">Registrar</b-button>
-
-    <div class="mt-5">
-      <h6 class="titleDatos">Si ya eres usuario registrado, favor entrar</h6>
+    <div class="mt-5 texto">
+      <p>Si ya eres usuario registrado, favor entrar</p>
       <p>
         De lo contrario, por favor regisése, Gracias
         
@@ -80,29 +80,20 @@ export default {
 
 <!-- Style -->
 <style scoped>
-.btnAceptar {
-  color: #ffffff;
-  background-color: rgb(3, 170, 148);
-  border-style: none !important;
-  border-radius: 5px;
-  padding: 10px 20px;
+.container {
+  background-image: url("./../assets/klaus2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 400px;
 }
-.btnReg {
-  color: #ffffff;
-  background-color: rgb(71, 12, 32);
-  border-style: none !important;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin-left: .3rem;
+.texto {
+  font-weight: bolder;
+  color: whitesmoke;
 }
 .input {
-  max-width: 400px;
+  max-width: 200px;
   margin: auto;
-}
-/* .datosLogin {
-  margin-top: 50px;
-} */
-.titleDatos {
   font-weight: bolder;
 }
 </style>
+

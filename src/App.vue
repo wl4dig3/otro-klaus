@@ -1,10 +1,13 @@
 
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Inicio</router-link> |
-      <router-link to="login">Login</router-link>
-    </div>
+    <!-- Navbar content -->
+    <nav class="navbar navbar-light bg-dark">
+      <div id="nav">
+        <router-link to="/">Inicio</router-link> |
+        <router-link to="login">Login</router-link>
+      </div>
+    </nav>
     <router-view />
   </div>
 </template>
@@ -31,19 +34,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-color: aquamarine;
-  max-height: 1000px;
+  height: 100px;
 }
 
 #nav {
-  padding: 30px;
+  padding: 10px;
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #c0d5eb;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #cfda43;
     }
   }
 }
