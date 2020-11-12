@@ -1,6 +1,6 @@
 <!-- Template -->
 <template>
-  <div class="container">
+  <div class="container mt-5">
     <b-form-group id="input-group-1 text-white" label="Email:" label-for="input-1">
       <b-form-input
         class="input"
