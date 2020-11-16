@@ -6,7 +6,7 @@
     </button>
 
     <!-- Tabla para Leer Información -->
-    <h4 class="font-weight-bolder mt-5 text-white">Inventario de productos</h4>
+    <h4 class="font-weight-bolder mt-5">Inventario de productos</h4>
     <table class="mx-auto">
       <thead>
         <th>Código</th>
@@ -162,20 +162,20 @@ export default {
 
 <style scoped>
 .container {
-  background-image: url("./../assets/klaus.jpg");
+  background-image: url("./../assets/main-bg1.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   height: 900px;
 }
-.formu {
+/* .formu {
   background-color: rgb(130, 198, 238);
-}
+} */
 
-th,
+/* th,
 td {
   color: whitesmoke;
   font-weight: bolder;
-}
+} */
 .titleAdd {
   margin-top: 50px;
   font-weight: bold;
