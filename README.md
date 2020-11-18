@@ -1,4 +1,4 @@
-# ottoklaus
+
 
 ## Project setup
 ```
@@ -17,7 +17,7 @@ npm run build
 
 ### Deploy
 ```
-[Deploy](https://otto-klaus-5a72a.web.app/)
+
 ```
 
 ### Customize configuration

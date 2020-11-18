@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Inventario from '../views/Inventario.vue'
 import firebase from 'firebase'
 
 Vue.use(VueRouter)
@@ -8,16 +8,25 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    name: 'Inventario',
+    component: Inventario,
     meta: {
       login: true,
     }
   },
+    
   {
     path: '/login',
     name: 'Login',
-    component: () => import(/* webpackChunkName: "login" */ '../views/Login.vue')
+    component: () => import(/* webpackChunkName: "login" */ '../views/Login.vue'),
+  },
+  {
+    path: '/imagenes',
+    name: 'Imagenes',
+    component: () => import('../views/Imagenes.vue'),
+    // meta: {
+    //   imagenes: true,
+    // }
   }
 ]
 
