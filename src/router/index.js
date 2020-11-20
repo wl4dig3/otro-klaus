@@ -24,9 +24,13 @@ const routes = [
     path: '/imagenes',
     name: 'Imagenes',
     component: () => import('../views/Imagenes.vue'),
-    // meta: {
-    //   imagenes: true,
-    // }
+    
+  },
+  {
+    path: '/lading',
+    name: 'LadingPage',
+    component: () => import('../views/LadingPage.vue'),
+    
   }
 ]
 

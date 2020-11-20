@@ -1,13 +1,15 @@
 <!-- Template -->
 <template>
+
   <div class="container mt-5">
+    <h2 class="text-white">Formulario de Ingreso / registro</h2>
     <b-form-group
+    
       id="input-group-1 text-white"
-      label="Email:"
-      label-for="input-1"
+      
     >
       <b-form-input
-        class="input"
+        class="input mt-5"
         id="input-1"
         v-model="email"
         type="email"
@@ -17,7 +19,7 @@
       </b-form-input>
     </b-form-group>
 
-    <b-form-group id="input-group-2" label="Password:" label-for="input-2">
+    <b-form-group id="input-group-2">
       <b-form-input
         class="input"
         id="input-2"
@@ -98,7 +100,7 @@ export default {
         .signInWithEmailAndPassword(email, password)
         .then((resultado) => {
           console.log(resultado);
-          router.push({ name: "Home" });
+          router.push({ name: "Inventario" });
         })
         .catch((e) => console.log(e.message));
     },
@@ -110,7 +112,7 @@ export default {
         .createUserWithEmailAndPassword(email, password)
         .then((resultado) => {
           console.log(resultado);
-          router.push({ name: "Home" });
+          router.push({ name: "Inventario" });
         })
         .catch((e) => console.log(e.message));
     },
