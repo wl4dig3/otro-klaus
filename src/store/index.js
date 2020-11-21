@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import firebase from "firebase";
+import Fotos from './fotos';
 
 Vue.use(Vuex);
 
@@ -56,5 +57,5 @@ export default new Vuex.Store({
 
   },
     
-  modules: {},
+  modules: {Fotos},
 });

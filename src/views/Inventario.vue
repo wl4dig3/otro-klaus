@@ -129,7 +129,7 @@
         <b-form-group id="input-group-2" label="Precio:" label-for="input-2">
           <b-form-input v-model="precio"> </b-form-input>
         </b-form-group>
-        <!-- boton para agregar el juguete  -->
+        <!-- boton para agregar el juguete al inventario -->
         <b-button type="submit" class="btn btn-warning mb-3" @click="agregar">
           <svg
             width="1em"
@@ -148,8 +148,10 @@
               d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"
             />
           </svg>
-          </b-button
-        >
+        </b-button>
+
+        
+        <Upload />
       </div>
     </div>
   </div>
@@ -159,9 +161,13 @@
 <script>
 import firebase from "firebase";
 import { mapState, mapGetters, mapActions } from "vuex";
+import Upload from "../components/Upload";
 
 export default {
   name: "Inventario",
+  components: {
+    Upload
+    },
   data() {
     return {
       idUpdating: "",
@@ -229,7 +235,7 @@ export default {
   background-image: url("./../assets/main-bg1.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 900px;
+  height: auto;
 }
 /* .formu {
   background-color: rgb(130, 198, 238);

@@ -22,9 +22,9 @@ export default {};
   background-image: url("./../assets/main.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 458px;
+  height: 515px;
 }
 button {
-  margin-top: 10rem;
+  margin-top: 15rem;
 }
 </style>

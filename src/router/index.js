@@ -7,7 +7,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/inventario',
     name: 'Inventario',
     component: Inventario,
     meta: {
@@ -27,7 +27,7 @@ const routes = [
     
   },
   {
-    path: '/lading',
+    path: '/',
     name: 'LadingPage',
     component: () => import('../views/LadingPage.vue'),
     
@@ -42,7 +42,7 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   let usuario = firebase.auth().currentUser;
-  console.log(usuario);
+  // console.log(usuario);
   let autorizacion = to.matched.some((route) => route.meta.login);
 
   if (!usuario && autorizacion) {
