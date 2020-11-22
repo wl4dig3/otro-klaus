@@ -26,6 +26,7 @@ const routes = [
     component: () => import('../views/Imagenes.vue'),
     
   },
+  
   {
     path: '/',
     name: 'LadingPage',

@@ -2,7 +2,7 @@
   <!-- grid  -->
   <div class="container">
     <div class="row">
-      <div class="col-sm">
+      <div class="col-sm" v-for="(imagenes,i) in productos" :key="i">
         <!-- cards  -->
         <div class="card" style="width: 18rem">
           <img
@@ -33,5 +33,14 @@
 </template>
 
 <script>
-export default {};
+import firebase from "firebase";
+import {mapActions, mapState} from 'vuex'
+export default {
+  
+
+  computed: {
+    ...mapState(['productos'])
+  },
+  
+};
 </script>

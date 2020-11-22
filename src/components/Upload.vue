@@ -59,7 +59,7 @@ export default {
           this.uploadValue = 100;
           storageRef.snapshot.ref.getDownloadURL().then((url) => {
             this.picture = url;
-            // console.log(this.picture)
+            console.log(this.picture)
           });
         }
       );
