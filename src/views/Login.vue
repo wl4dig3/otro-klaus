@@ -1,13 +1,8 @@
 <!-- Template -->
 <template>
-
-  <div class="container mt-5">
+  <div class="login">
+    <b-form-group id="input-group-1">
     <h2 class="text-white">Formulario de Ingreso / registro</h2>
-    <b-form-group
-    
-      id="input-group-1 text-white"
-      
-    >
       <b-form-input
         class="input mt-5"
         id="input-1"
@@ -122,11 +117,11 @@ export default {
 
 <!-- Style -->
 <style scoped>
-.container {
+.login {
   background-image: url("./../assets/access.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 500px;
+  height: 515px;
 }
 .texto {
   font-weight: bolder;

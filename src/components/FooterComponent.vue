@@ -1,10 +1,8 @@
 <template>
   <div class="footer">
-    <!-- <h1>Footer component</h1> -->
-    <!-- <template> -->
-
+    <!-- grupo de iconos redes sociales  -->
     <!--Facebook-->
-    <a class="btn-floating  btn-lg  btn-fb " type="button" role="button"
+    <a class="btn-floating btn-lg btn-fb" type="button" role="button"
       ><i class="fab fa-facebook-f"></i
     ></a>
     <!--Twitter-->
@@ -21,9 +19,10 @@
     ></a>
     <!--Instagram-->
     <a class="btn-floating btn-lg btn-ins" type="button" role="button"
-      ><i class="fab fa-instagram"></i></a>
+      ><i class="fab fa-instagram"></i
+    ></a>
 
-    <!-- // </template> -->
+    
   </div>
 </template>
 

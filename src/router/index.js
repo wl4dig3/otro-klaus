@@ -31,9 +31,13 @@ const routes = [
     path: '/',
     name: 'LadingPage',
     component: () => import('../views/LadingPage.vue'),
-    
+  },
+  {
+    path: '*',
+    component: () => import( '../views/NotFound.vue')
   }
 ]
+    
 
 const router = new VueRouter({
   mode: 'history',

@@ -1,7 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import firebase from "firebase";
-import Fotos from './fotos';
+import api from './api';
 
 Vue.use(Vuex);
 
@@ -57,5 +57,5 @@ export default new Vuex.Store({
 
   },
     
-  modules: {Fotos},
+  modules: {api},
 });
