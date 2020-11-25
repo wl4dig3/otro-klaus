@@ -2,7 +2,7 @@
   <div class="lading">
     <!-- <h1>Ladin page</h1> -->
     <router-link to="/login">
-      <button type="button" class="btn btn-outline-dark">Entrar</button>
+      <button type="button" class="btn btn-outline-dark" id="entrar">Entrar</button>
     </router-link>
 
     <router-link to="/imagenes">

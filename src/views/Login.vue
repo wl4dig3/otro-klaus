@@ -46,7 +46,7 @@
       </svg>
       Entrar
     </button>
-    <button type="button" class="btn btn-success" @click="register">
+    <button type="button" class="btn btn-success" id="crear_usuario" @click="register">
       <svg
         width="1em"
         height="1em"
