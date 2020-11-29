@@ -2,7 +2,7 @@
 <template>
   <div class="login">
     <b-form-group id="input-group-1">
-    <h2 class="text-white">Formulario de Ingreso / registro</h2>
+      <h2 class="text-white">Formulario de Ingreso / registro</h2>
       <b-form-input
         class="input mt-5"
         id="input-1"
@@ -46,7 +46,12 @@
       </svg>
       Entrar
     </button>
-    <button type="button" class="btn btn-success" id="crear_usuario" @click="register">
+    <button
+      type="button"
+      class="btn btn-success"
+      id="crear_usuario"
+      @click="register"
+    >
       <svg
         width="1em"
         height="1em"
@@ -116,11 +121,11 @@ export default {
 </script>
 
 <!-- Style -->
-<style scoped>
+<style lang="scss" scoped>
 .login {
   background-image: url("./../assets/access.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   height: 515px;
 }
 .texto {
@@ -133,4 +138,6 @@ export default {
   font-weight: bolder;
 }
 </style>
+
+
 

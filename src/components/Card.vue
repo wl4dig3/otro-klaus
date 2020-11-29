@@ -50,7 +50,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-  // .container {
-  //   width: auto;
-  // }
+  .container {
+    background-image: url('../assets/black-thread.png');  
+  }
+
 </style>

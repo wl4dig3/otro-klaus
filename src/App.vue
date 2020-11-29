@@ -77,9 +77,8 @@
 
 
 <script>
-
 import FooterComponent from "./components/FooterComponent.vue";
-import api from './store/api'
+import api from "./store/api";
 import { mapActions } from "vuex";
 export default {
   components: {
@@ -91,7 +90,7 @@ export default {
     this.getIndicador();
   },
   methods: {
-    ...mapActions('api',["getIndicador"]),
+    ...mapActions("api", ["getIndicador"]),
     ...mapActions(["getDataProductos"]),
   },
 };

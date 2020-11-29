@@ -21,10 +21,12 @@ export default {};
 .lading {
   background-image: url("./../assets/main.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   height: 515px;
 }
 button {
   margin-top: 15rem;
 }
+
+
 </style>

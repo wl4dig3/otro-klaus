@@ -233,9 +233,9 @@ export default {
 
 <style scoped>
 .container {
-  background-image: url("./../assets/main-bg1.jpg");
+  background-image: url("./../assets/main_bg_2.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   height: auto;
 }
 
