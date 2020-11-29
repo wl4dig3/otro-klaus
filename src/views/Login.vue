@@ -26,7 +26,11 @@
       </b-form-input>
     </b-form-group>
     <!-- botones  -->
-    <button type="button" class="btn btn-primary mr-2" @click="login">
+    <button 
+    type="button" 
+    class="btn btn-primary mr-2" 
+    id="boton-login"
+    @click="login">
       <svg
         width="1em"
         height="1em"

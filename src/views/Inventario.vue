@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <!-- Botón Logout -->
-    <button type="button" @click="logout" class="btn btn-outline-primary mt-4" id="boton_salir">
+    <button type="button" @click="logout" class="btn btn-outline-primary mt-4" id="botonsalir">
       <svg
         width="1em"
         height="1em"
@@ -46,7 +46,7 @@
               v-b-modal.modal-1
               @click="editar(producto.id)"
               class="btn btn-primary ml-5"
-              id="boton_editar"
+              id="botoneditar"
             >
               <svg
                 width="1em"
@@ -91,22 +91,22 @@
     <!-- ventana modal que se dispara al clickear el boton editar  -->
     <b-modal id="modal-1" title="BootstrapVue" class="EditForm">
       <b-form-group id="input-group-1" label="Código:" label-for="input-1">
-        <b-form-input id="campo_cod" v-model="producto.data.codigo"> </b-form-input>
+        <b-form-input id="campocod" v-model="producto.data.codigo"> </b-form-input>
       </b-form-group>
 
       <b-form-group id="input-group-2" label="Nombre:" label-for="input-2">
-        <b-form-input id="campo_nombre" v-model="producto.data.nombre"> </b-form-input>
+        <b-form-input id="camponombre" v-model="producto.data.nombre"> </b-form-input>
       </b-form-group>
 
       <b-form-group id="input-group-2" label="Stock:" label-for="input-2">
-        <b-form-input id="campo_stock" v-model="producto.data.stock"> </b-form-input>
+        <b-form-input id="campostock" v-model="producto.data.stock"> </b-form-input>
       </b-form-group>
 
       <b-form-group id="input-group-2" label="Precio:" label-for="input-2">
-        <b-form-input id="campo_precio" v-model="producto.data.precio"> </b-form-input>
+        <b-form-input id="campoprecio" v-model="producto.data.precio"> </b-form-input>
       </b-form-group>
 
-      <b-button type="submit" id="subir_cambios" class="btn btn-outline-light" @click="update"
+      <b-button type="submit" id="subircambios" class="btn btn-outline-light" @click="update"
         >Subir cambios</b-button
       >
     </b-modal>
@@ -178,8 +178,8 @@ export default {
       precio: 0,
       producto: {
         data: {
-          codigo: "",
-          nombre: "",
+          codigo: " ",
+          nombre: " ",
           stock: 0,
           precio: 0,
         },
@@ -203,7 +203,7 @@ export default {
     ...mapActions(["agregarProducto", "updateProducto", "eliminarProducto"]),
     agregar() {
       const producto = {
-        codigo: this.codigo,
+        codigo:  this.codigo,
         nombre: this.nombre,
         stock: this.stock,
         precio: this.precio,
