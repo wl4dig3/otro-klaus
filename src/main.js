@@ -29,16 +29,17 @@ const firebaseConfig = {
   appId: "1:415571816563:web:865ec4697c455f875afa06"
 };
 
-  firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
-  const db = firebase.firestore()
-  const auth = firebase.auth()
+const db = firebase.firestore()
+const auth = firebase.auth()
 
-  export {db, auth}
-  
+export { db, auth }
+
 
 new Vue({
   router,
   store,
   render: h => h(App)
 }).$mount('#app')
+

@@ -1,11 +1,11 @@
 <template>
   <!-- grid  -->
-  <div class="container">
+  <div class="container mx-0">
     <h1 class="my-3">{{titulo}}</h1>
     <div class="row">
       <div class="col-sm" v-for="(imagen, i) in productos" :key="i">
         <!-- cards  -->
-        <div class="card" style="width: 18rem">
+        <div class="card" style="width: 19rem">
           <img
             :src="imagen.data.imagen"
             class="card-img-top"
@@ -22,12 +22,12 @@
             <li class="list-group-item">Codigo:{{imagen.data.codigo}}</li>
             <!-- <li class="list-group-item">Vestibulum at eros</li> -->
           </ul>
-          <div class="card-body">
-            <!-- modal  -->
+          <!-- <div class="card-body">
+            
             
             <a href="#" class="card-link">Card link</a>
             <a href="#" class="card-link">Another link</a>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -49,3 +49,8 @@ export default {
   },
 };
 </script>
+<style lang="scss" scoped>
+  // .container {
+  //   width: auto;
+  // }
+</style>

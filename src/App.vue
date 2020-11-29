@@ -77,6 +77,7 @@
 
 
 <script>
+
 import FooterComponent from "./components/FooterComponent.vue";
 import api from './store/api'
 import { mapActions } from "vuex";

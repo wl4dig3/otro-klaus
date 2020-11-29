@@ -10,8 +10,9 @@ export default {
 
     },
     mutations: {
+        // la mutacion que modificará el estado y payload es el objeto Fecha
         setIndicador(state,payload){
-            state.indicador= payload
+            state.indicador.push(payload)
         },
         setindicadorFiltrado(state,payload){
             state.indicadorFiltrado = payload
@@ -23,10 +24,14 @@ export default {
                  const resp = await fetch('https://www.feriadosapp.com/api/holidays.json')
                  const data = await resp.json() 
                  console.log('aqui esta la:',data);
-                //  let indicadores = [],
-                 data.data.forEach(e => {
-                     console.log('Mostrando resultado del llamado a la api',e.data);
-                     indicador.push(e.data)
+                //  Extrayendo los datos
+                 data.data.forEach(e => {    // 'e' es el objeto dentro del arreglo
+                    //  console.log('Mostrando resultado del llamado a la api', e);
+                    let Fecha ={
+                        dia: e.date,
+                        motivo: e.title
+                    };
+                    commit('setIndicador', Fecha) // le pasamos a la mutacion setIndicador el objeto de la Fecha
                      
                  });
              } catch (error) {
