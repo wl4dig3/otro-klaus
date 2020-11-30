@@ -66,7 +66,7 @@
               </svg>
             </button>
             <!-- Botón Eliminar  Producto-->
-            <button @click="eliminar(producto.id)" class="btn btn-danger ml-3">
+            <button @click="eliminar(producto.id)" id="eliminar-producto" class="btn btn-danger ml-3">
               <svg
                 width="1em"
                 height="1em"
@@ -98,12 +98,16 @@
         <b-form-input id="camponombre" v-model="producto.data.nombre"> </b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-2" label="Stock:" label-for="input-2">
+      <b-form-group id="input-group-3" label="Stock:" label-for="input-3">
         <b-form-input id="campostock" v-model="producto.data.stock"> </b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-2" label="Precio:" label-for="input-2">
+      <b-form-group id="input-group-4" label="Precio:" label-for="input-4">
         <b-form-input id="campoprecio" v-model="producto.data.precio"> </b-form-input>
+      </b-form-group>
+
+      <b-form-group id="input-group-5" label="Descripcion" label-for="input-5">
+        <b-form-input id="campodescripcion" v-model="producto.data.descripcion"> </b-form-input>
       </b-form-group>
 
       <b-button type="submit" id="subircambios" class="btn btn-outline-light" @click="update"
@@ -115,23 +119,27 @@
     <h4 class="titleAdd">Agrega un nuevo producto</h4>
     <div class="formu">
       <div class="w-50 m-auto">
-        <b-form-group id="input-group-1" label="Código:" label-for="input-1">
+        <b-form-group id="input-grup-1" label="Código:" label-for="input-1">
           <b-form-input v-model="codigo"> </b-form-input>
         </b-form-group>
 
-        <b-form-group id="input-group-2" label="Nombre:" label-for="input-2">
+        <b-form-group id="input-grup-2" label="Nombre:" label-for="input-2">
           <b-form-input v-model="nombre"> </b-form-input>
         </b-form-group>
 
-        <b-form-group id="input-group-2" label="Stock:" label-for="input-2">
+        <b-form-group id="input-grup-3" label="Stock:" label-for="input-3">
           <b-form-input v-model="stock"> </b-form-input>
         </b-form-group>
 
-        <b-form-group id="input-group-2" label="Precio:" label-for="input-2">
+        <b-form-group id="input-grup-4" label="Precios:" label-for="input-4">
           <b-form-input v-model="precio"> </b-form-input>
         </b-form-group>
+
+        <b-form-group id="input-grup-5" label="Descripcion:" label-for="input-5">
+          <b-form-input v-model="descripcion"> </b-form-input>
+        </b-form-group>
         <!-- boton para agregar el juguete al inventario -->
-        <b-button type="submit" class="btn btn-warning mb-3" @click="agregar">
+        <b-button type="submit" id="agregar-productos" class="btn btn-warning mb-3" @click="agregar">
           <svg
             width="1em"
             height="1em"
@@ -176,12 +184,14 @@ export default {
       nombre: "",
       stock: 0,
       precio: 0,
+      descripcion:"",
       producto: {
         data: {
           codigo: " ",
           nombre: " ",
           stock: 0,
           precio: 0,
+          descripcion:"",
         },
       },
     };
@@ -207,6 +217,7 @@ export default {
         nombre: this.nombre,
         stock: this.stock,
         precio: this.precio,
+        descripcion: this.descripcion
       };
       this.agregarProducto(producto);
     },
