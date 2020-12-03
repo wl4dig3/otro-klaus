@@ -6,29 +6,30 @@
 
       <form>
         <div class="row mt-5">
-          <div class="form-group  col-12">
-            <label for="formGroupExampleInput">Nombre y apellido</label>
-            <input
-              type="text"
-              class="form-control"
-              id="formGroupExampleInput"
-              placeholder="Aqui su nombre y apellido"
-            />
+          <div class="form-group col-12">
+            <b-form-input 
+            class="control" 
+            type="text" 
+            v-model="nombre"
+            :state="validar"
+            >
+            </b-form-input>
+            <small>ingrese al menos 3 caracteres</small>
+            <p>texto: {{nombre}}</p>
           </div>
           <div class="form-group col-12">
-            <label for="formGroupExampleInput2">Número de telefóno</label>
-            <input
-              type="text"
-              class="form-control"
-              id="formGroupExampleInput2"
-              placeholder="Ingrese su número de telefóno"
-            />
-          </div>
-          <div class="col-md  mb-2">
-            <button
-              type="submit"
-              class="btn btn-outline-light btn-block"
+            <b-form-input 
+            class="control" 
+            type="number" 
+            v-model="numero"
+            :state="validarnum"
             >
+            </b-form-input>
+            <small>Ingrese numero telefónico</small>
+            <p>texto: {{numero}}</p>
+          </div>
+          <div class="col-md mb-2">
+            <button type="submit" class="btn btn-outline-light btn-block">
               <svg
                 width="1em"
                 height="1em"
@@ -50,6 +51,27 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: "Contacto",
+  data() {
+    return {
+      nombre: "",
+      numero:'',
+    };
+  },
+  computed:{
+      validar(){
+          return this.nombre.length > 3 ? true : false
+      },
+      validarnum(){
+          return this.numero.length > 3 ? true : false
+
+      }
+  }
+};
+</script>
+
 <style lang="scss" scoped>
 .fondo {
   background-image: url("./../assets/contacto.jpeg");
@@ -62,9 +84,7 @@
   background: rgba(0, 0, 0, 0.6);
   color: whitesmoke;
   padding: 3rem auto;
-  
 }
-
 
 hr {
   background-color: white;
@@ -73,7 +93,7 @@ hr {
 
 // mediaquerie
 @media (min-width: 576px) {
-  .form-control {
+  .control {
     width: 35rem;
     margin: 0 auto;
     // display: none;
@@ -82,6 +102,5 @@ hr {
     width: 35rem;
     margin: 0 auto 1rem;
   }
-
 }
 </style>
