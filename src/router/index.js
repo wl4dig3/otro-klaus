@@ -33,6 +33,11 @@ const routes = [
     component: () => import('../views/LadingPage.vue'),
   },
   {
+    path: '/contacto',
+    name: 'Contacto',
+    component: () => import('../views/Contacto.vue'),
+  },
+  {
     path: '*',
     component: () => import( '../views/NotFound.vue')
   }
