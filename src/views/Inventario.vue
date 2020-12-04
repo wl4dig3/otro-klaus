@@ -249,6 +249,7 @@ export default {
         descripcion: this.descripcion,
       };
       this.agregarProducto(producto);
+      
     },
 
     editar(id) {

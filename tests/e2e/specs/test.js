@@ -4,7 +4,7 @@ describe('My First Test', () => {
   it('Probando crear usuario en vista Login y editando el crud', () => {
     cy.visit('/');
     cy.get('#entrar').click();
-    cy.get('#input-1').type('test4@tata.com');
+    cy.get('#input-1').type('test44@tata.com');
     cy.get('#input-2').type('12341234');
     cy.get('#crear_usuario').click();
     cy.wait(3000);
@@ -26,7 +26,7 @@ describe('My First Test', () => {
     cy.get('#input-1').type('quesito@game.com');
     cy.get('#input-2').type('12341234');
     cy.get('#boton-login').click();
-    cy.get('#input-grup-1').type('R-016');
+    cy.get('#input-grup-1').type('R-026');
     cy.get('#input-grup-2').type('Test');
     cy.get('#input-grup-3').type(5);
     cy.get('#input-grup-4').type(29900);
