@@ -7,26 +7,26 @@
       <form>
         <div class="row mt-5">
           <div class="form-group col-12">
-            <b-form-input 
-            class="control" 
-            type="text" 
-            v-model="nombre"
-            :state="validar"
+            <b-form-input
+              class="control"
+              type="text"
+              v-model="nombre"
+              :state="validar"
             >
             </b-form-input>
             <small>ingrese al menos 3 caracteres</small>
-            <p>texto: {{nombre}}</p>
+            <!-- <p>texto: {{ numero }}</p> probando v-model--> 
           </div>
           <div class="form-group col-12">
-            <b-form-input 
-            class="control" 
-            type="number" 
-            v-model="numero"
-            :state="validarnum"
+            <b-form-input
+              class="control"
+              type="number"
+              v-model="numero"
+              :state="validarnum"
             >
             </b-form-input>
             <small>Ingrese numero telefónico</small>
-            <p>texto: {{numero}}</p>
+            <!-- <p>telefono: {{ numero }}</p> probando v-model -->
           </div>
           <div class="col-md mb-2">
             <button type="submit" class="btn btn-outline-light btn-block">
@@ -47,6 +47,7 @@
           </div>
         </div>
       </form>
+      <h3 class="mt-5 pb-4">Gracias por contactarnos</h3>
     </div>
   </div>
 </template>
@@ -57,18 +58,17 @@ export default {
   data() {
     return {
       nombre: "",
-      numero:'',
+      numero: "",
     };
   },
-  computed:{
-      validar(){
-          return this.nombre.length > 3 ? true : false
-      },
-      validarnum(){
-          return this.numero.length > 3 ? true : false
-
-      }
-  }
+  computed: {
+    validar() {
+      return this.nombre.length > 3 ? true : false;
+    },
+    validarnum() {
+      return this.numero.length > 3 ? true : false;
+    },
+  },
 };
 </script>
 
