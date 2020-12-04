@@ -32,4 +32,6 @@ A diafrutar del proyecto en la web
 https://atentica-desafio.web.app/
 
 
-- 
+###Agradecimiento
+
+Mi más sincero agradecimiento al profesor  Brian , al ayudante Gonzalo Fleming (ahora profesor) por su valiosa ayuda en compartir su conocimiento para obtener una pincelada de esta maravillosa carrera, apenas es el comienzo. Igualmente a mis compañeros de estudio quienes son de gran apoyo en compartir dudas e infinidad de material para estudiar.
