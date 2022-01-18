@@ -1,7 +1,7 @@
 <template>
   <div class="fondo">
     <div class="container contacto">
-      <h1>Formulario de contacto</h1>
+      <h1>Formulario de contacto.</h1>
       <hr />
 
       <form>
